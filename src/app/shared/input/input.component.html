@@ -1,0 +1,41 @@
+<div class="mb-3">
+    <label class="inline-block mb-2">{{label}}</label>
+    <input [formControl]="control" [type]="type" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                        duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+        [placeholder]="placeholder" [mask]="format" [dropSpecialCharacters]="false"/>
+    <ng-container *ngIf="control.touched && control.dirty">
+        <!-- password message -->
+        <p class="text-red-400" *ngIf="control.errors?.pattern">
+            Passwords must be at least 8 characters long, have 1 uppercase, 1 lowercase, and 1 number.
+        </p>
+
+        <!-- message when required error is true -->
+        <p class="text-red-400" *ngIf="control.errors?.required">
+            This is required
+        </p>
+
+        <!-- message when minlength error is true -->
+        <p class="text-red-400" *ngIf="control.errors?.minlength">
+            The value should contain more than {{control.errors?.minlength.requiredLength}} characters.
+        </p>
+
+        <!-- message when minlength error is true -->
+        <p class="text-red-400" *ngIf="control.errors?.email">
+            You must enter a valid email.
+        </p>
+
+        <!-- message when min and max error are true -->
+        <p class="text-red-400" *ngIf="control.errors?.min">
+            You must be older than 16 years old.
+        </p>
+
+        <p class="text-red-400" *ngIf="control.errors?.max">
+            You must be younger than 100 years old.
+        </p>
+
+
+    
+
+    </ng-container>
+
+</div>
