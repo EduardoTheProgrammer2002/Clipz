@@ -22,7 +22,7 @@
     <!-- Phone Number -->
     <app-input label="Phone number" format="(000)000-0000" [control]="phoneNumber" placeholder="(000)-000-0000"></app-input>
 
-    <button type="submit" [disabled]="registerForm.invalid" 
+    <button type="submit" [disabled]="registerForm.invalid || inSubmission" 
             class="disabled:opacity-50 disabled:bg-indigo-400 block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500">
         Submit
     </button>
