@@ -32,6 +32,17 @@
         <p class="text-red-400" *ngIf="control.errors?.max">
             You must be younger than 100 years old.
         </p>
+        <p class="text-red-400" *ngIf="control.errors?.max">
+            You must be younger than 100 years old.
+        </p>
+        <p class="text-red-400" *ngIf="control.errors?.noMatch">
+            Passwords do not match.
+        </p>
+        <p class="text-red-400" *ngIf="control.errors?.emailTaken">
+            Email taken. Please try another email.
+        </p>
+
+        
 
 
     
