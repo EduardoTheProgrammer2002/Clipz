@@ -21,6 +21,7 @@
     "@angular/router": "^14.2.0",
     "@ffmpeg/core": "^0.11.0",
     "@ffmpeg/ffmpeg": "^0.11.6",
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "@types/node": "^18.11.10",
     "@types/uuid": "^8.3.4",
     "@types/video.js": "^7.3.50",
